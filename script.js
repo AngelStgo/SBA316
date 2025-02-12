@@ -31,6 +31,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 
 
 const list = document.getElementById("transactionList");
+const form = document.getElementById("transactionForm");
 const status = document.getElementById("status");
 
 function renderList () {
@@ -52,6 +53,8 @@ function renderList () {
 
           <div class="amount ${type}">
           <span>${formatter.format(amount)}</span>
+
+          <div class="action">
           </div>
 
          `;
@@ -60,3 +63,10 @@ function renderList () {
 }
 
 renderList();
+
+function deleteTransaction(id) {
+    const index = transactions.findIndex((trx) => trx.id === id);
+    transactions.splice(index, 1);
+
+    renderList()
+}

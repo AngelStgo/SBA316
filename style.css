@@ -120,6 +120,10 @@ ul li {
     position: relative;
 }
 
+ul li:hover {
+background: #51576c;
+}
+
 .name h4 {
     font-size: 1rem;
     font-weight: 600;
@@ -142,6 +146,16 @@ ul li {
 .amount.expense {
     color: indianred;
 }
+
+/* .action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f00;
+    color: #fff;
+    height: 100%;
+    width: 50px;
+} */
 
 #status {
     text-align:  center;
